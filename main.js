@@ -21,6 +21,17 @@ db.defaults({ topic: [], author : [] })
 //     .push({id : 2, title : "mysql", description : "mysql is ...", author : 1})
 //     .write();
 
-console.log(db.get('topic')
-    .find({ id : 1 })
-    .value());
+// console.log(db.get('topic')
+//     .find({ id : 1 })
+//     .value());
+
+// update
+// db.get('topic')
+//   .find({ id: 1 })
+//   .assign({ title: 'lowdb and mariadb!'})
+//   .write();
+
+// remove
+db.get('topic')
+  .remove({ id: 1 })
+  .write()
